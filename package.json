@@ -1,0 +1,43 @@
+{
+	"name": "@login-with-metamask/frontend",
+	"version": "2.0.0",
+	"author": "elputa",
+	"description": " project for 'One-click Login with Blockchain: A MetaMask Tutorial'",
+	"license": "MIT",
+	"main": "build",
+	"homepage": "https://test.sahib.pro",
+	"scripts": {
+		"build": "react-scripts build",
+		"deploy": "gh-pages -d build",
+		"start": "react-scripts start"
+	},
+	"dependencies": {
+		"@types/dotenv": "^8.2.0",
+		"@types/jwt-decode": "^2.2.1",
+		"@types/react": "^17.0.35",
+		"@types/react-dom": "^17.0.11",
+		"@types/web3": "^1.0.20",
+		"dotenv": "^16.3.1",
+		"jwt-decode": "^3.1.2",
+		"react": "^17.0.2",
+		"react-blockies": "^1.4.1",
+		"react-dom": "^17.0.2",
+		"react-scripts": "^4.0.3",
+		"web3": "^1.6.1"
+	},
+	"devDependencies": {
+		"gh-pages": "^6.0.0",
+		"typescript": "^4.5.2"
+	},
+	"eslintConfig": {
+		"extends": [
+			"react-app"
+		]
+	},
+	"browserslist": [
+		">0.2%",
+		"not dead",
+		"not ie <= 11",
+		"not op_mini all"
+	]
+}
