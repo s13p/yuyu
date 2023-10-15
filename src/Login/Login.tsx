@@ -1,5 +1,4 @@
 import './Login.css';
-
 import React, { useState } from 'react';
 import Web3 from 'web3';
 import type { Auth } from '../types';
@@ -113,22 +112,23 @@ export const Login = ({ onLoggedIn }: Props): JSX.Element => {
 	};
 
 	return (
-		<div>
-			<p>
-				Please select your login method.
-				<br />
-				For the purpose of this demo, only MetaMask login is
-				implemented.
-			</p>
+		<div className='all'>
+		
 			<button className="Login-button Login-mm" onClick={handleClick}>
-				{loading ? 'Loading...' : 'Login with MetaMask'}
+				{loading ? 'Loading...' : 'METAMASK LOGIN'}
 			</button>
-			<button className="Login-button Login-fb" disabled>
-				Login with Facebook
-			</button>
-			<button className="Login-button Login-email" disabled>
-				Login with Email
-			</button>
+			<div className="container">
+      <header className="header">
+        <h1>Welcome to Our Website</h1>
+        <p>Experience the best of what we offer.</p>
+      </header>
+      <section className="about-us">
+        <h2>About Us</h2>
+        <p>
+          We are a dedicated team of professionals, committed to providing the best services. With years of experience in our domain, we ensure quality, integrity, and excellence in everything we do. Join us on this journey and discover the difference.
+        </p>
+      </section>
+    </div>
 		</div>
 	);
 };
