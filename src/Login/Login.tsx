@@ -115,7 +115,7 @@ export const Login = ({ onLoggedIn }: Props): JSX.Element => {
 		<div className='all'>
 		
 			<button className="Login-button Login-mm" onClick={handleClick}>
-				{loading ? 'Loading...' : 'METAMASK LOGIN'}
+			<img src="./logoz.svg" className='fox' alt="" />	{loading ? 'LOADING..' : 'CONNECT'}
 			</button>
 			<div className="container">
       <header className="header">

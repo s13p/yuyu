@@ -1,3 +1,7 @@
+@import url('https://fonts.cdnfonts.com/css/balisong');
+@import url('https://fonts.cdnfonts.com/css/lt-neo-rounded');
+
+                
 .identicon {
   border-radius: 50%;
   vertical-align: middle;
@@ -10,16 +14,144 @@
   top: 0;
   right: 0;
   margin-top: 1rem;
+  margin-right : 1rem;
 }
 
 .guda {
   position: absolute;
-  top: 0;
+  bottom: 0;
   right: 0;
-  margin-top: 3rem;
+margin-bottom: 7px;
+margin-right: 7px;
   font-size: 14px;
+  color: white;
 }
 .huhu {
-  font-size: 17px;
-  line-height: 2px;
+height: 19px;
+margin-top: -1rem;
+}
+
+
+.dashboard {
+  font-family: Arial, sans-serif;
+  width: 300px;
+  margin: 20px auto;
+  margin-top: 50px;
+  padding: 20px;
+background-color: rgba(245, 245, 220, 0.659);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.parameter {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+}
+
+.parameter label,
+.parameter span {
+  transition: transform 0.3s, color 0.3s;
+  font-family: 'LT Neo Rounded', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;                                            
+                                                
+}
+
+.parameter:hover label,
+.parameter:hover span {
+  transform: scale(1.05);
+  color: #007bff;
+}
+.title {
+  font-size: 30px;
+  color: white;
+  font-family: 'Balisong', sans-serif;
+}
+.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  gap: 10px;
+  font-family: 'LT Neo Rounded', sans-serif;
+                                                
+  width: 400px;
+  margin: 50px auto 10px auto;
+  padding: 20px;
+background-color: rgba(245, 245, 220, 0.659);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.action-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  font-family: 'LT Neo Rounded', sans-serif;
+                                                
+  border: 1px solid #000000;
+
+  cursor: pointer;
+  transition:  background-color 0.3s, transform 0.3s;
+}
+
+.action-button:hover {
+ color: #79baff;
+ background-color: #000000;
+
+  border-radius: 0px;
+}  
+.profile {
+  height: 100vh;
+  background-color: beige;
+}
+.bg {
+  animation:slide 7s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, rgb(17, 19, 28) 50%, rgb(0, 0, 0) 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:8s;
+}
+
+.bg3 {
+  animation-duration:40s;
+}
+
+.content {
+  background-color:rgba(255,255,255,.8);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  left:50%;
+  padding:10vmin;
+  position:fixed;
+  text-align:center;
+  top:50%;
+  transform:translate(-50%, -50%);
+}
+
+h1 {
+  font-family:monospace;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
 }

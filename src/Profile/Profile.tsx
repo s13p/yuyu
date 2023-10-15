@@ -100,12 +100,17 @@ export const Profile = ({ auth, onLoggedOut }: Props): JSX.Element => {
 
     return (
         <div className="Profile">
+			<div className="bg"></div>
+<div className="bg bg2"></div>
+<div className="bg bg3"></div>
             {/* Dashboard Content with Hard-coded Data */}
+<div className='title' >A.I DASHBOARD
+</div>
             <div className="dashboard">
 			<pre className="dashboarda" >{publicAddress}</pre>
 			<div className="parameter">
                     <label>Username</label>
-                    <span className="huhu">{username ? <pre>{username}</pre> : 'not set'}{' '}</span>
+                    <span className="huhu">{username ? <pre>{username}</pre> : ''}{' '}</span>
                 </div>
                 <div className="parameter">
                     <label>Deposit:</label>
@@ -116,7 +121,11 @@ export const Profile = ({ auth, onLoggedOut }: Props): JSX.Element => {
                     <span>${dashboardData.earnings}</span>
                 </div>
             </div>
-            
+			<div className="actions">
+                                <button className="action-button">Emergency Withdraw</button>
+                                <button className="action-button">Deposit Crypto</button>
+                                <button className="action-button">Withdraw Earnings</button>
+                            </div>
             {/* Original Profile Content */}
            
             <div className="guda">
@@ -127,7 +136,7 @@ export const Profile = ({ auth, onLoggedOut }: Props): JSX.Element => {
                 </button>
             </div>
             <p>
-                <button className="makwekwe" onClick={onLoggedOut}>Logout</button>
+                <button className="makwekwe action-button" onClick={onLoggedOut}>Logout</button>
             </p>
         </div>
     );

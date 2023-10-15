@@ -1,10 +1,16 @@
+@import url('https://fonts.cdnfonts.com/css/lt-neo-rounded');
 .Login-button {
-  color: white;
-  display: block;
-  font-size: 16px;
-  height: 50px;
 
-  width: fit-content;
+  display: flex;
+  font-size: 16px;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+width: 8rem;
+margin: 0 auto ;
+margin: 1rem 1rem 0 0 ;
+border: none;
+
   position: absolute;
   top: 0;
   right: 0;
@@ -16,14 +22,31 @@
 
 .Login-email {
   background-color: darkgray;
+
 }
 
 .Login-fb {
   background-color: rgb(72, 98, 163);
 }
+.fox {
+height: 30px;
+  width: auto;
+  margin-left: -1rem;
+margin-bottom: 0rem;
+}
+.Login-mm{
+  background-color: rgb(128, 128, 128);
+  border: 1px solid rgb(166, 255, 0);
+  border-radius: 6px;
+  transition: all .5s ease-in;
+}
+.Login-mm:hover {
+background-color: rgb(166, 255, 0);
 
-.Login-mm {
-  background-color: rgb(255, 125, 0);
+
+
+
+
 }
 .all {
   background-color: black;
@@ -32,25 +55,30 @@
 }
 
 .container {
-  font-family: Arial, sans-serif;
+  font-family: 'LT Neo Rounded', sans-serif;
+                                                
 }
 
 .header {
-  height: 100vh;
+  height: 120vh;
   background-image: url('./bg.png'); /* Replace with your image path */
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   color: #fff;
   display: flex;
+  margin-top:-100px !important;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  animation: fadeIn 2s ease-in;
+  animation: fadeIn 3s ;
 }
 
 .header h1 {
   font-size: 3rem;
   margin-bottom: 20px;
+  font-family: 'LT Neo Rounded', sans-serif;
+                                                
 }
 
 .about-us {
