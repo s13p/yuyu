@@ -119,7 +119,7 @@ export const Login = ({ onLoggedIn }: Props): JSX.Element => {
 			</button>
 			<div className="container">
       <header className="header">
-        <h1>Welcome to Our Website</h1>
+        <h1>TRADE AI</h1>
         <p>Experience the best of what we offer.</p>
       </header>
       <section className="about-us">
