@@ -7,32 +7,38 @@ import Blockies from 'react-blockies';
 import { Auth } from '../types';
 
 interface Props {
-	auth: Auth;
-	onLoggedOut: () => void;
+    auth: Auth;
+    onLoggedOut: () => void;
 }
 
 interface State {
-	loading: boolean;
-	user?: {
-		id: number;
-		username: string;
-	};
-	username: string;
+    loading: boolean;
+    user?: {
+        id: number;
+        username: string;
+    };
+    username: string;
 }
 
 interface JwtDecoded {
-	payload: {
-		id: string;
-		publicAddress: string;
-	};
+    payload: {
+        id: string;
+        publicAddress: string;
+    };
 }
 
 export const Profile = ({ auth, onLoggedOut }: Props): JSX.Element => {
-	const [state, setState] = useState<State>({
-		loading: false,
-		user: undefined,
-		username: '',
-	});
+    const [state, setState] = useState<State>({
+        loading: false,
+        user: undefined,
+        username: '',
+    });
+
+    // Hard-coded dashboard data
+    const dashboardData = {
+        deposit: 1000,  // You can adjust these values
+        earnings: 150,
+    };
 
 	useEffect(() => {
 		const { accessToken } = auth;
@@ -84,36 +90,45 @@ export const Profile = ({ auth, onLoggedOut }: Props): JSX.Element => {
 				setState({ ...state, loading: false });
 			});
 	};
+    const { accessToken } = auth;
+    const {
+        payload: { publicAddress },
+    } = jwtDecode<JwtDecoded>(accessToken);
 
-	const { accessToken } = auth;
+    const { loading, user } = state;
+    const username = user && user.username;
 
-	const {
-		payload: { publicAddress },
-	} = jwtDecode<JwtDecoded>(accessToken);
-
-	const { loading, user } = state;
-
-	const username = user && user.username;
-
-	return (
-		<div className="Profile">
-			<p>
-				Logged in as <Blockies seed={publicAddress} />
-			</p>
-			<div>
-				My username is {username ? <pre>{username}</pre> : 'not set.'}{' '}
-				My publicAddress is <pre>{publicAddress}</pre>
-			</div>
-			<div>
-				<label htmlFor="username">Change username: </label>
-				<input name="username" onChange={handleChange} />
-				<button disabled={loading} onClick={handleSubmit}>
-					Submit
-				</button>
-			</div>
-			<p>
-				<button onClick={onLoggedOut}>Logout</button>
-			</p>
-		</div>
-	);
+    return (
+        <div className="Profile">
+            {/* Dashboard Content with Hard-coded Data */}
+            <div className="dashboard">
+			<pre className="dashboarda" >{publicAddress}</pre>
+			<div className="parameter">
+                    <label>Username</label>
+                    <span className="huhu">{username ? <pre>{username}</pre> : 'not set'}{' '}</span>
+                </div>
+                <div className="parameter">
+                    <label>Deposit:</label>
+                    <span>${dashboardData.deposit}</span>
+                </div>
+                <div className="parameter">
+                    <label>Earnings:</label>
+                    <span>${dashboardData.earnings}</span>
+                </div>
+            </div>
+            
+            {/* Original Profile Content */}
+           
+            <div className="guda">
+                <label htmlFor="username">Change username: </label>
+                <input name="username" onChange={handleChange} />
+                <button disabled={loading} onClick={handleSubmit}>
+                    Submit
+                </button>
+            </div>
+            <p>
+                <button className="makwekwe" onClick={onLoggedOut}>Logout</button>
+            </p>
+        </div>
+    );
 };
